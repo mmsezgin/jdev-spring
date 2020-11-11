@@ -24,10 +24,10 @@ public class HomeController {
         return "home";
     }
 
-    @GetMapping("/spring")
-    public String getMappingEx(){
-        return "home";
-    }
+//    @GetMapping("/spring")
+//    public String getMappingEx(){
+//        return "home";
+//    }
 
     @PostMapping("/spring")
     public String getMappingEx2(){
