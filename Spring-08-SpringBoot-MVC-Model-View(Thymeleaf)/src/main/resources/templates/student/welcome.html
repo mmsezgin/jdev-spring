@@ -19,6 +19,14 @@
 
     <!--Link-->
     <a th:href="@{https://cybertekschool.com}">Cybertek</a>
+    <a th:href="@{/student/register}">Register</a>
+
+    <!--Adding parameters to link-->
+    <a th:href="@{/student/welcome(id=3)}">Link2</a>
+    <a th:href="@{/student/welcome(id=${student.id})}">Link3</a>
+
+
+
 
 
 
