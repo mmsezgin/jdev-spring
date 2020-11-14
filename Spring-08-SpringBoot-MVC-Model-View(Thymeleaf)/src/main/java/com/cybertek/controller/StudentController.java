@@ -1,5 +1,6 @@
 package com.cybertek.controller;
 
+import com.cybertek.model.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,9 +38,8 @@ public class StudentController {
         LocalDate birthday = LocalDate.now().minusYears(42);
         model.addAttribute("birthday",birthday);
 
-
-        //BREAK TILL 1:10 pm
-
+        Student student = new Student(1,"Mike","Smith");
+        model.addAttribute("student",student);
 
        return "student/welcome";
     }
