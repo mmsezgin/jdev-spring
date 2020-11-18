@@ -8,7 +8,7 @@
 
 <div align="center">
 
-    <form th:object="${mentor}">
+    <form action="/mentor/confirm" method="post" th:object="${mentor}">
 
         <label>First Name:</label>
         <input type="text" id="firstName" th:field="*{firstName}"><br>
@@ -32,10 +32,9 @@
         </select><br>
 
         <label>Company:</label>
-        <textarea th:field="*{company}"></textarea>br>
+        <textarea th:field="*{company}"></textarea><br>
 
         <button type="submit">Register</button>
-
 
     </form>
 </div>
