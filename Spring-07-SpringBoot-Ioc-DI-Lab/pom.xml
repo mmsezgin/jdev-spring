@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com</groupId>
-	<artifactId>cybertek</artifactId>
+	<artifactId>Spring-07-SpringBoot-Ioc-DI-Lab</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cybertek-lab</name>
+	<name>Spring-07-SpringBoot-Ioc-DI-Lab</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

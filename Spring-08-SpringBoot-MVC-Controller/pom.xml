@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com</groupId>
-	<artifactId>cybertek</artifactId>
+	<artifactId>Spring-08-SpringBoot-MVC-Controller</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cybertek</name>
+	<name>Spring-08-SpringBoot-MVC-Controller</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
