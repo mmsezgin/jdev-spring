@@ -5,6 +5,7 @@ import com.cybertek.entity.Employee;
 import com.cybertek.enums.Gender;
 import com.cybertek.repository.DepartmentRepository;
 import com.cybertek.repository.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
