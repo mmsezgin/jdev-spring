@@ -193,8 +193,10 @@ public class DataGenerator implements CommandLineRunner {
      * Create movies and genres.
      */
     private void createMoviesAndGenres() {
+
         List<Genre> genre = Arrays.asList(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13);
         genreRepository.saveAll(genre);
+
         m1.setSummary("An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him.");
         m2.setSummary("After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish.");
         m3.setSummary("Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency");
@@ -214,6 +216,7 @@ public class DataGenerator implements CommandLineRunner {
         m8.setGenreList(Arrays.asList(g3, g8, g10));
         m9.setGenreList(Arrays.asList(g3, g10));
         List<Movie> movies = Arrays.asList(m1, m2, m3, m4, m5, m6, m7, m8, m9);
+
         movieRepository.saveAll(movies);
     }
     /**
