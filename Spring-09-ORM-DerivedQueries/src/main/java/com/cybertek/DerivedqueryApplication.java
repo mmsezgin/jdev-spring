@@ -25,7 +25,10 @@ public class DerivedqueryApplication {
 
 		System.out.println("findByCountry: " + regionRepository.findByCountry("Canada"));
 		System.out.println("findDistinctByCountry: " + regionRepository.findDistinctByCountry("Canada"));
-		System.out.println("findDistinctByCountry: " + regionRepository.findByCountryContaining("United"));
+		System.out.println("findByCountryContaining: " + regionRepository.findByCountryContaining("United"));
+		System.out.println("findByCountryContainingOrderByCountry: " + regionRepository.findByCountryContainingOrderByCountry("Asia"));
+		System.out.println("findByCountryContainingOrderByCountry: " + regionRepository.findByCountryContainingOrderByCountry("Asia"));
+		System.out.println("findTopBy2ByCountry: " + regionRepository.findTop2ByCountry("Canada"));
 
 
 
