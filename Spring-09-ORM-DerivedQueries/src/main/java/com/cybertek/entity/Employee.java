@@ -37,6 +37,7 @@ public class Employee extends BaseEntity {
     private Department department;
 
     @ManyToOne
+    @JoinColumn(name = "region_id")
     private Region region;
 
 }
