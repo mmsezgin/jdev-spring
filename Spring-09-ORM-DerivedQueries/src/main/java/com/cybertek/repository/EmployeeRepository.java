@@ -5,6 +5,7 @@ import org.apache.tomcat.jni.Local;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -33,6 +34,14 @@ public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
     List<Employee> findByHireDateBetween(LocalDate startDate, LocalDate endDate);
 
     //Display all employees where salaries greater and equal to '' in order
+    List<Employee> findBySalaryIsGreaterThanEqualOrderBySalaryDesc(Integer salary);
+
+    //Display top unique 3 employees that is making less than ''
+    List<Employee> findDistinctTop3BySalaryLessThan(Integer salary);
+
+    //Display all employees that do not have email address
+    List<Employee> findByEmailIsNull();
+
 
 
 

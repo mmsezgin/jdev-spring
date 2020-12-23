@@ -1,6 +1,7 @@
 package com.cybertek;
 
 import com.cybertek.repository.DepartmentRepository;
+import com.cybertek.repository.EmployeeRepository;
 import com.cybertek.repository.RegionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -16,6 +17,8 @@ public class DerivedqueryApplication {
 	RegionRepository regionRepository;
 	@Autowired
 	DepartmentRepository departmentRepository;
+	@Autowired
+	EmployeeRepository employeeRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DerivedqueryApplication.class, args);
@@ -48,6 +51,18 @@ public class DerivedqueryApplication {
 		System.out.println("findDistinctTop3ByDivisionContains: " + departmentRepository.findDistinctTop3ByDivisionContains("Hea"));
 
 		System.out.println("---------Department End------------");
+
+	}
+
+	@PostConstruct
+	public void testEmployees(){
+
+		System.out.println("---------Employee start------------");
+
+		System.out.println(employeeRepository.findByEmailIsNull());
+
+
+		System.out.println("---------Employee End------------");
 
 	}
 
