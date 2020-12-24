@@ -67,6 +67,16 @@ public interface EmployeeRepository extends JpaRepository<Employee,Long> {
     @Query("SELECT e FROM Employee e WHERE e.email IS NOT NULL")
     List<Employee> getEmployeeByEmailIsNotNull();
 
+    //Sort Salary in ascending order
+    @Query("SELECT e FROM Employee e ORDER BY e.salary")
+    List<Employee> getEmployeeBySalaryOrderByAsc();
+
+    //Sort Salary in descending order
+    @Query("SELECT e FROM Employee e ORDER BY e.salary DESC ")
+    List<Employee> getEmployeeBySalaryOrderByDesc();
+
+
+
 
 
 
