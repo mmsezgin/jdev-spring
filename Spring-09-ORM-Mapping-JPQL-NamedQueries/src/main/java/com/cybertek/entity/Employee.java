@@ -9,8 +9,9 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.time.LocalDate;
 
+//@Entity(name="Employees")
 @Entity
-@Table(name = "employees")
+@Table(name ="employees")
 @Getter
 @Setter
 @NoArgsConstructor
