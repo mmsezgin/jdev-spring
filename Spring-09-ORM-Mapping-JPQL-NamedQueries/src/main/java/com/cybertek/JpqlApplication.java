@@ -31,5 +31,7 @@ public class JpqlApplication {
         System.out.println(employeeRepository.retrieveEmployeeSalaryGreaterThan(100000));
 
         System.out.println(departmentRepository.findOzzyDepartment("Kids"));
+
+        System.out.println(departmentRepository.countAllDepartments());
     }
 }

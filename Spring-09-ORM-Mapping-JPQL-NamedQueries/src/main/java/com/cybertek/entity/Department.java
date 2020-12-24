@@ -16,7 +16,7 @@ import javax.persistence.*;
 @NamedQuery(name="Department.findOzzyDepartment",
             query = "SELECT d FROM Department d WHERE d.division=?1")
 @NamedNativeQuery(name="Department.countAllDepartments",
-                  query="SELECT count(*) FROM deparments",
+                  query="SELECT * FROM departments",
                   resultClass = Department.class)
 public class Department {
     @Id

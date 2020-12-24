@@ -20,6 +20,8 @@ public interface DepartmentRepository extends JpaRepository<Department,String> {
 
     List<Department> findOzzyDepartment(String division);
 
+    List<Department> countAllDepartments();
+
 
 
 
