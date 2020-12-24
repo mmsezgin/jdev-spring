@@ -18,6 +18,8 @@ public interface DepartmentRepository extends JpaRepository<Department,String> {
     @Query(nativeQuery = true)
     List<Department> retrieveDepartmentByDivisionContains(String pattern);
 
+    List<Department> findOzzyDepartment(String division);
+
 
 
 
