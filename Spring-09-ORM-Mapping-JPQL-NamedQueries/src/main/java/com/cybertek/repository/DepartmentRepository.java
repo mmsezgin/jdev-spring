@@ -13,6 +13,8 @@ public interface DepartmentRepository extends JpaRepository<Department,String> {
     @Query("SELECT d FROM Department d WHERE d.division IN ?1")
     List<Department> getDepartmentByDivisionIn(List<String> division);
 
+    List<Department> retrieveDepartmentByDivision(String division);
+
 
 
 
