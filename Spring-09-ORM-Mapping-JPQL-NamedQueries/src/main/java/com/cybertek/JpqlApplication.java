@@ -25,6 +25,6 @@ public class JpqlApplication {
         System.out.println(employeeRepository.getEmployeeByEmail("myakovlivf@ucsd.edu").get());
         employeeRepository.updateEmployeeJPQL(1);
 
-        employeeRepository.retrieveEmployeeSalaryGreaterThan(100000);
+        System.out.println(employeeRepository.retrieveEmployeeSalaryGreaterThan(100000));
     }
 }
