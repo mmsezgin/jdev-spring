@@ -4,6 +4,8 @@ import com.cybertek.entity.Ticket;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
@@ -12,12 +14,16 @@ public interface TicketRepository extends JpaRepository<Ticket,Long> {
     // ------------------- DERIVED QUERIES ------------------- //
 
     //Write a derived query to count how many tickets a user bought
+    Integer countAllByUserId(Long userId);
 
     //Write a derived query to list all tickets by specific email
+    List<Ticket> findAllByUserEmail(String email);
 
     //Write a derived query to count how many tickets are sold for a specific movie
+    Integer countAllByMovieCinemaMovieName(String name);
 
     //Write a derived query to list all tickets between a range of dates
+    List<Ticket> findAllByDateTimeBetween(LocalDateTime date1, LocalDateTime date2);
 
     // ------------------- JPQL QUERIES ------------------- //
 
