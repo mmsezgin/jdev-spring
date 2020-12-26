@@ -46,9 +46,12 @@ public interface CinemaRepository extends JpaRepository<Cinema,Long> {
     List<Cinema> retrieveAllByNameOrSponsoredName(String pattern);
 
     //Write a native query to sort all cinemas by name
-
+    @Query(value = "SELECT * FROM cinema ORDER BY name",nativeQuery = true)
+    List<Cinema> sortByName();
 
     //Write a native query to distinct all cinemas by sponsored name
+    @Query(value = "SELECT DISTINCT sponsored_name FROM cinema",nativeQuery = true)
+    List<String> distinctBYSponsoredName();
 
 
 
