@@ -25,6 +25,7 @@ public class CinemaappApplication {
         System.out.println(accountRepository.fetchAdminUsers());
         System.out.println(cinemaRepository.distinctBYSponsoredName());
         System.out.println(movieCinemaRepository.countAllByCinemaId(4L));
+        System.out.println(movieCinemaRepository.retrieveAllByLocationName("AMC Empire 25"));
     }
 
 
