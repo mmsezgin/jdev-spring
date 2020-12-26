@@ -8,21 +8,22 @@ import com.cybertek.repository.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
-@Component
+//@Component
 public class DataGenerator implements CommandLineRunner {
 
-    private final MovieRepository movieRepository;
-    private final CinemaRepository cinemaRepository;
-    private final GenreRepository genreRepository;
-    private final UserRepository userRepository;
-    private final MovieCinemaRepository movieCinemaRepository;
-    private final TicketRepository ticketRepository;
+    private MovieRepository movieRepository;
+    private CinemaRepository cinemaRepository;
+    private GenreRepository genreRepository;
+    private UserRepository userRepository;
+    private MovieCinemaRepository movieCinemaRepository;
+    private TicketRepository ticketRepository;
 
     public DataGenerator(MovieRepository movieRepository, CinemaRepository cinemaRepository, GenreRepository genreRepository, UserRepository userRepository, MovieCinemaRepository movieCinemaRepository, TicketRepository ticketRepository) {
         this.movieRepository = movieRepository;
@@ -159,6 +160,8 @@ public class DataGenerator implements CommandLineRunner {
      * Create users.
      */
     private void createUsers() {
+
+
         u1.setAccount(a1);
         u2.setAccount(a2);
         u3.setAccount(a3);
@@ -329,4 +332,6 @@ public class DataGenerator implements CommandLineRunner {
         List<Ticket> tickets = Arrays.asList(t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20);
         ticketRepository.saveAll(tickets);
     }
+
+
 }
