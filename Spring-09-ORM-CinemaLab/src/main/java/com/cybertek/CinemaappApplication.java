@@ -14,6 +14,8 @@ import javax.annotation.PostConstruct;
 public class CinemaappApplication {
     @Autowired
     AccountRepository accountRepository;
+    @Autowired
+    CinemaRepository cinemaRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(CinemaappApplication.class, args);
@@ -22,6 +24,7 @@ public class CinemaappApplication {
     @PostConstruct
     public void testAccount(){
         System.out.println(accountRepository.fetchAdminUsers());
+        System.out.println(cinemaRepository.distinctBYSponsoredName());
     }
 
 
