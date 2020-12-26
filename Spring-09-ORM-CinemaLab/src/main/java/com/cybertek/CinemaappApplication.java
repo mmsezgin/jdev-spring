@@ -12,9 +12,16 @@ import javax.annotation.PostConstruct;
 
 @SpringBootApplication
 public class CinemaappApplication {
+    @Autowired
+    AccountRepository accountRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(CinemaappApplication.class, args);
+    }
+
+    @PostConstruct
+    public void testAccount(){
+        System.out.println(accountRepository.fetchAdminUsers());
     }
 
 
