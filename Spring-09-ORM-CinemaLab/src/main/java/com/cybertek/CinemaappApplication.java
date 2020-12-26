@@ -1,9 +1,6 @@
 package com.cybertek;
 
-import com.cybertek.repository.AccountRepository;
-import com.cybertek.repository.CinemaRepository;
-import com.cybertek.repository.MovieRepository;
-import com.cybertek.repository.TicketRepository;
+import com.cybertek.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +13,8 @@ public class CinemaappApplication {
     AccountRepository accountRepository;
     @Autowired
     CinemaRepository cinemaRepository;
+    @Autowired
+    MovieCinemaRepository movieCinemaRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(CinemaappApplication.class, args);
@@ -25,6 +24,7 @@ public class CinemaappApplication {
     public void testAccount(){
         System.out.println(accountRepository.fetchAdminUsers());
         System.out.println(cinemaRepository.distinctBYSponsoredName());
+        System.out.println(movieCinemaRepository.countAllByCinemaId(4L));
     }
 
 
