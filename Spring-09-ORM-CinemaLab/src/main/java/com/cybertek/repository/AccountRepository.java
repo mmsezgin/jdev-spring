@@ -34,18 +34,31 @@ public interface AccountRepository extends JpaRepository<Account,Long> {
     // ------------------- JPQL QUERIES ------------------- //
 
     //Write a JPQL query that returns all accounts
+    @Query("SELECT a FROM Account a ")
+    List<Account> fetchAllJPQL();
 
     //Write a JPQL query to list all admin accounts
+    @Query("SELECT a.address FROM Account a WHERE a.role ='USER'")
+    List<Account> fetchAdminUsers();
 
     //Write a JPQL query to sort all accounts with age
+    @Query("SELECT a FROM Account a ORDER BY a.age desc ")
+    List<Account> orderWithAgeJPQL();
+
 
     // ------------------- Native QUERIES ------------------- //
 
     //Write a native query to read all accounts with an age lower than a specific value
+    @Query(value = "SELECT * FROM account_details WHERE age < ?1",nativeQuery = true)
+    List<Account>  retrieveAllByAgeLowerThan(Integer age);
 
     //Write a native query to read all accounts that a specific value can be containable in the name, address, country, state city
+    @Query(value = "SELECT * FROM account_details WHERE name ILIKE concat('%',?1,'%') OR country ILIKE concat('%',?1,'%') OR address ILIKE concat('%',?1,'%') OR state ILIKE concat('%',?1,'%')",nativeQuery = true)
+    List<Account> retrieveBySearchCriteria(String pattern);
 
     //Write a native query to read all accounts with an age lower than a specific value
+    @Query(value = "SELECT * FROM account_details WHERE age>?1",nativeQuery = true)
+    List<Account> retrieveLessThanAge(int age);
 
 
 
