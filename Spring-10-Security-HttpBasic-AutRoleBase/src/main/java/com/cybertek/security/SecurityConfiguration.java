@@ -20,7 +20,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("index.html").permitAll()
                 .antMatchers("/profile/**").authenticated()
                 .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("management/**").hasAnyRole("ADMIN","MANAGER")
+                .antMatchers("/management/**").hasAnyRole("ADMIN","MANAGER")
                 .and()
                 .httpBasic(); //perform basic http authentication
     }
