@@ -42,8 +42,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .tokenValiditySeconds(120)
                 .key("cybertekSecret")
                 .userDetailsService(userPrincipalDetailsService);
-
-
     }
 
     @Bean
