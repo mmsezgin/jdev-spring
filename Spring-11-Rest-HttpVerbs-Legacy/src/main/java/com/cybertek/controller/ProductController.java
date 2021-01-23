@@ -30,6 +30,12 @@ public class ProductController {
         return productService.getProducts();
     }
 
+    //CREATE PRODUCT
+
+    //DELETE PRODUCT
+
+    //UPDATE PRODUCT
+
 
 }
 
