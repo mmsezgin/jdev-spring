@@ -5,10 +5,12 @@ import com.cybertek.enums.UserState;
 import com.cybertek.repository.UserRepository;
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
+@Service
 public class UserService {
 
     private final UserRepository userRepository;
@@ -27,8 +29,10 @@ public class UserService {
     public List<User> getAll() {
         return userRepository.findAll();
     }
+
     @Transactional
     public User createUser(User user) throws ServiceException {
+
         User foundUserByEmail = readByEmail(user.getEmail());
         User foundUserByUsername = readByUsername(user.getUsername());
         if(foundUserByEmail != null) {
@@ -37,10 +41,12 @@ public class UserService {
         if(foundUserByUsername != null) {
             throw new ServiceException("This user already exists, please change your username");
         }
+
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setIsVerified(false);
         return userRepository.save(user);
     }
+
     @Transactional
     public User verifyUser(User user) {
         user.setIsVerified(true);
@@ -49,6 +55,7 @@ public class UserService {
     }
     @Transactional
     public void deleteUser(Integer id) throws ServiceException {
+
         User user = userRepository.findById(id).orElse(null);
         if (user == null) {
             throw new ServiceException("This user does not exist");
@@ -58,6 +65,7 @@ public class UserService {
     }
     @Transactional
     public User resetPassword(User user) throws ServiceException {
+
         User foundUser = userRepository.findByEmail(user.getEmail()).orElse(null);
         if (foundUser == null) {
             throw new ServiceException("User with email does not exists: " + user.getEmail());
