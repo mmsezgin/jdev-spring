@@ -4,6 +4,8 @@ package com.cybertek.controller;
 import com.cybertek.entity.Product;
 import com.cybertek.entity.ResponseWrapper;
 import com.cybertek.service.ProductService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,26 +21,28 @@ public class ProductController {
 
     private ProductService productService;
 
+    Logger logger = LoggerFactory.getLogger(ProductController.class);
+
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
 
-    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public ResponseEntity<Product> getProduct(@PathVariable("id") long id){
-        return ResponseEntity.ok(productService.getProduct(id));
-    }
 
     @GetMapping
-    public  ResponseEntity<List<Product>> getProducts(){
-        HttpHeaders responseHttpHeaders = new HttpHeaders();
-        responseHttpHeaders.set("Version","Cybertek.v1");
-        responseHttpHeaders.set("Operation","Get List");
+    public  List<Product> getProducts(){
 
-        return ResponseEntity
-                .ok()
-                .headers(responseHttpHeaders)
-                .body(productService.getProducts());
+        logger.info("Before -> Controller:{} - Method:{} - Input Parameter :{}","ProductController","getProducts()");
+
+        List<Product> list = productService.getProducts();
+
+        logger.info("After -> Controller:{} - Method:{} - Output Parameters:{}","ProductController","getProducts",list.toString());
+
+        return list;
     }
+
+
+
+
 
     @PostMapping
     public  ResponseEntity<List<Product>> createProduct(@RequestBody Product product){
