@@ -102,10 +102,6 @@ public class LoggingAspect {
         logger.info("After finally -> Method : {} - results :{}",joinPoint.getSignature().toShortString());
     }
 
-    @After("anyGetPutProductOperation2()")
-    public void afterControllerAdvice2(JoinPoint joinPoint){
-        logger.info("After finally -> Method : {} - results :{}",joinPoint.getSignature().toShortString());
-    }
 
 
 
