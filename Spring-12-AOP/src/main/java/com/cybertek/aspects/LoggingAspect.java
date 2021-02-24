@@ -47,6 +47,11 @@ public class LoggingAspect {
         logger.info("Before -> Method {} - Arguments : {} - Target : {}",joinPoint,joinPoint.getArgs(),joinPoint.getTarget());
     }
 
+    @Before("anyUpdateOperation()")
+    public void beforeControllerAdvice2(JoinPoint joinPoint){
+        logger.info("Before -> Method {} - Arguments : {} - Target : {}",joinPoint,joinPoint.getArgs(),joinPoint.getTarget());
+    }
+
 
 
 
