@@ -16,6 +16,22 @@ class CalculatorTest {
     }
 
     @Test
+    void testCase3(){
+        assertArrayEquals(new int[]{1,2,3},new int[]{1,2,3});
+    }
+
+    @Test
+    void testCase4(){
+        String nullString = null;
+        String notNullString = "Cybertek";
+
+        assertNotNull(notNullString);
+//        assertNotNull(nullString);
+        assertNull(nullString);
+
+    }
+
+    @Test
     void add() {
         int actual = Calculator.add(2,3);
         assertEquals(5,actual);
