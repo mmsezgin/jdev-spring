@@ -67,14 +67,6 @@ class CalculatorTest {
     }
 
 
-
-
-
-
-
-
-
-
     @Test
     void add() {
         int actual = Calculator.add(2,3);
