@@ -7,4 +7,8 @@ class CalculatorTest {
     @Test
     void add() {
     }
+
+    @Test
+    void add2() {
+    }
 }
