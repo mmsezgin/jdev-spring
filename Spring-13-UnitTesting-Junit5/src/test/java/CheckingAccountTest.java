@@ -26,5 +26,7 @@ class CheckingAccountTest {
     @Test
     void purchase() {
         assertEquals(-65,checkingAccount.purchase("Shoes",130));
+
+        //BREAK TILL 1:00 PM
     }
 }
