@@ -56,8 +56,9 @@ class ProjectServiceImplTest {
 
         verify(projectRepository).findByProjectCode(Mockito.anyString());
 
-        assertEquals(exception.getMessage(),"project Not Found");
-
+        assertEquals(exception.getMessage(),"Project Not Found");
 
     }
+
+
 }
