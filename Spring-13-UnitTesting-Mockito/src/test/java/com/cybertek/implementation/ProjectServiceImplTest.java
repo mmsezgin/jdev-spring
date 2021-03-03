@@ -12,8 +12,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class ProjectServiceImplTest {
@@ -59,6 +58,21 @@ class ProjectServiceImplTest {
         assertEquals(exception.getMessage(),"Project Not Found");
 
     }
+    @Test
+    void saveTest(){
+        ProjectDTO projectDTO = new ProjectDTO();
+        Project project = new Project();
+
+        when(projectMapper.convertToEntity(projectDTO)).thenReturn(project);
+        when(projectRepository.save(project)).thenReturn(project);
+
+        projectService.save(projectDTO);
+
+        verify(projectRepository).save(project);
+
+    }
+
+
 
 
 }
