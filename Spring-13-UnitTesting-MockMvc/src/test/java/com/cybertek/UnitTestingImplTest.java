@@ -65,6 +65,7 @@ class UnitTestingImplTest {
         when(dataRepository.findById(anyInt())).thenReturn(new int[]{10,10,10});
         int actual = unitTesting.calculateSumUsingDataService_withParameter();
         assertEquals(30,actual);
+//        assertEquals(30,actual);
     }
 
 
