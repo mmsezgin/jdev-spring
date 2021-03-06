@@ -16,10 +16,18 @@ public class StudentController {
         this.studentService = studentService;
     }
 
+    @GetMapping("/student")
+    Student getStudent_service(){
+        Student student = new Student("Mike","Smith",20);
+        return student;
+    }
+
     @GetMapping("/data")
     List<Student> getStudent_data(){
         return  studentService.getStudent_data();
     }
+
+
 
 
 }
