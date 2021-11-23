@@ -13,6 +13,8 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @NoArgsConstructor
+
+// By extending BaseEntity, it will take primary key.
 public class Department extends BaseEntity {
 
     private String department;

@@ -59,7 +59,7 @@ public class DataGenerator implements CommandLineRunner {
         e4.setRegion(r4);
         e5.setRegion(r5);
 
-
+        //Add above mentioned data to employeeList and departmentList repositories
         employeeList.addAll(Arrays.asList(e1,e2,e3,e4,e5));
         departmentList.addAll(Arrays.asList(d1,d2,d3,d4,d5));
 
