@@ -105,6 +105,7 @@ WHERE gender='F'
 AND department='Tools'
 AND salary>110000;
 
+
 --Write a query that returns the first name and hire date of those employees who earn more than 165000
 --as well as those employees that work in the sports department and also happen to be man
 SELECT *
@@ -125,6 +126,7 @@ FETCH  FIRST 3 ROWS ONLY ;
 
 SELECT salary as yearly_salary
 FROM employees;
+
 
 --Write a query that displays the name and ages of the top 4 oldest students.
 SELECT *
@@ -156,6 +158,12 @@ SELECT LENGTH(TRIM('    Hello There    '));
 
 SELECT first_name || ' ' || last_name AS full_name
 FROM employees;
+
+SELECT first_name
+FROM employees
+WHERE department='Sports'
+AND MAX(salary);
+
 
 SELECT (salary>140000)
 FROM employees;

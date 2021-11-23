@@ -14,10 +14,10 @@ import java.util.List;
 @Controller
 @RequestMapping("/mentor")
 public class MentorController {
-
+    // This form is for retrieve or get, so use short form GetMapping
     @GetMapping("/register")
     public String showForm(Model model){
-
+        //Creating a new mentor object
         model.addAttribute("mentor",new Mentor());
 
         List<String> batchList = Arrays.asList("B7","B8","B9","B10","B11","B12","E1","E2","E3","E4");
