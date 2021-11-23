@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring-05-JavaAnnotations-Autowired" />
+        <module name="Spring-08-SpringBoot-MVC-Form" />
+        <module name="Spring-07-SpringBoot-Ioc-DI-Lab" />
+        <module name="Spring-07-SpringBoot-Demo" />
+        <module name="Spring-06-JavaCode-Configuration" />
+        <module name="Spring-06-JavaCode-PostConstruct-PreDestroy" />
+        <module name="Spring-04-BeanLifeCycle" />
+        <module name="Spring-01-SpringContainer" />
+        <module name="Spring-05-JavaAnnotations-Component" />
+        <module name="Spring-03-BeanScope-Singleton-Prototype" />
+        <module name="Spring-08-SpringBoot-MVC-Controller" />
+        <module name="ormconfig" />
+        <module name="cinemaapp" />
+        <module name="Spring-05-Value" />
+        <module name="Spring-02-DI-Setterinjection" />
+        <module name="Spring-02-DI-ConstructorInjection" />
+        <module name="Spring-08-SpringBoot-MVC-Model-View" />
+        <module name="Spring-05-JavaAnnotations-Qualifier" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cinemaapp" target="11" />
+      <module name="ormconfig" target="11" />
+      <module name="Spring-01-SpringContainer" target="1.8" />
+      <module name="Spring-02-DI-ConstructorInjection" target="1.8" />
+      <module name="Spring-02-DI-Setterinjection" target="1.8" />
+      <module name="Spring-03-BeanScope-Singleton-Prototype" target="1.8" />
+      <module name="Spring-04-BeanLifeCycle" target="1.8" />
+      <module name="Spring-05-JavaAnnotations-Autowired" target="1.8" />
+      <module name="Spring-05-JavaAnnotations-Component" target="1.8" />
+      <module name="Spring-05-JavaAnnotations-Qualifier" target="1.8" />
+      <module name="Spring-05-Value" target="1.8" />
+      <module name="Spring-06-JavaCode-Configuration" target="1.8" />
+      <module name="Spring-06-JavaCode-PostConstruct-PreDestroy" target="1.8" />
+      <module name="Spring-07-SpringBoot-Demo" target="11" />
+      <module name="Spring-07-SpringBoot-Ioc-DI-Lab" target="11" />
+      <module name="Spring-08-SpringBoot-MVC-Controller" target="11" />
+      <module name="Spring-08-SpringBoot-MVC-Form" target="11" />
+      <module name="Spring-08-SpringBoot-MVC-Model-View" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Spring-07-SpringBoot-Demo" options="-parameters" />
+      <module name="Spring-07-SpringBoot-Ioc-DI-Lab" options="-parameters" />
+      <module name="Spring-08-SpringBoot-MVC-Controller" options="-parameters" />
+      <module name="Spring-08-SpringBoot-MVC-Form" options="-parameters" />
+      <module name="Spring-08-SpringBoot-MVC-Model-View" options="-parameters" />
+      <module name="cinemaapp" options="-parameters" />
+      <module name="ormconfig" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Spring-08-SpringBoot-MVC-Form/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-08-SpringBoot-MVC-Controller/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-07-SpringBoot-Ioc-DI-Lab/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-07-SpringBoot-Demo/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-06-JavaCode-PostConstruct-PreDestroy/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-06-JavaCode-Configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-05-Value/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-05-JavaAnnotations-Qualifier/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-05-JavaAnnotations-Component/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-05-JavaAnnotations-Autowired/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-04-BeanLifeCycle/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-03-BeanScope-Singleton-Prototype/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-02-DI-Setterinjection/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-02-DI-ConstructorInjection/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-01-SpringContainer/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-08-SpringBoot-MVC-Model-View(Thymeleaf)/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-09-ORM-CinemaLab/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-09-ORM-TableCreation/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="corretto-11" project-jdk-type="JavaSDK" />
+</project>
