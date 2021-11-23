@@ -41,24 +41,24 @@ WHERE salary<=100000;
 SELECT *
 FROM employees
 WHERE department='Clothing'
-AND salary>90000;
+  AND salary>90000;
 
 SELECT *
 FROM employees
 WHERE department='Clothing'
-AND salary>90000
-AND region_id=2;
+  AND salary>90000
+  AND region_id=2;
 
 SELECT *
 FROM employees
 WHERE department='Clothing'
-OR salary>90000;
+   OR salary>90000;
 
 SELECT *
 FROM employees
 WHERE salary<40000
-AND (department='Clothing'
-OR department='Pharmacy');
+  AND (department='Clothing'
+    OR department='Pharmacy');
 
 SELECT *
 FROM employees
@@ -85,9 +85,9 @@ WHERE email IS NOT NULL;
 SELECT *
 FROM employees
 WHERE department='Sports'
-OR department='First Aid'
-OR department='Toys'
-OR department='Garden';
+   OR department='First Aid'
+   OR department='Toys'
+   OR department='Garden';
 
 SELECT *
 FROM employees
@@ -102,16 +102,15 @@ WHERE salary BETWEEN 80000 AND 100000;
 SELECT first_name
 FROM employees
 WHERE gender='F'
-AND department='Tools'
-AND salary>110000;
-
+  AND department='Tools'
+  AND salary>110000;
 
 --Write a query that returns the first name and hire date of those employees who earn more than 165000
 --as well as those employees that work in the sports department and also happen to be man
 SELECT *
 FROM employees
 WHERE salary>165000
-OR(department='Sports' AND gender='M');
+   OR(department='Sports' AND gender='M');
 
 SELECT *
 FROM employees
@@ -122,17 +121,16 @@ FROM employees;
 
 SELECT DISTINCT department
 FROM employees
-FETCH  FIRST 3 ROWS ONLY ;
+    FETCH  FIRST 3 ROWS ONLY ;
 
 SELECT salary as yearly_salary
 FROM employees;
-
 
 --Write a query that displays the name and ages of the top 4 oldest students.
 SELECT *
 FROM students
 ORDER BY age DESC
-FETCH FIRST 4 ROWS ONLY;
+    FETCH FIRST 4 ROWS ONLY;
 
 --Write a query that returns students based on the following criteria:
 --The student must not be older than age 20 if their student_no is either between 3 and 5 or their student_no is 7.
@@ -141,8 +139,8 @@ FETCH FIRST 4 ROWS ONLY;
 SELECT *
 FROM students
 WHERE age<=20
-AND (student_no BETWEEN 3 and 5 OR student_no=7)
-OR (age>20 AND student_no>=4);
+    AND (student_no BETWEEN 3 and 5 OR student_no=7)
+   OR (age>20 AND student_no>=4);
 
 SELECT UPPER(first_name),LOWER(department)
 FROM employees;
@@ -158,12 +156,6 @@ SELECT LENGTH(TRIM('    Hello There    '));
 
 SELECT first_name || ' ' || last_name AS full_name
 FROM employees;
-
-SELECT first_name
-FROM employees
-WHERE department='Sports'
-AND MAX(salary);
-
 
 SELECT (salary>140000)
 FROM employees;
@@ -284,32 +276,32 @@ WHERE region_id IN(SELECT region_id FROM regions WHERE country='Asia' OR country
 SELECT *
 FROM employees
 WHERE department = ANY(SELECT department FROM departments WHERE division='Kids')
-AND hire_date > ALL(SELECT hire_date FROM employees WHERE department='Maintenance');
+  AND hire_date > ALL(SELECT hire_date FROM employees WHERE department='Maintenance');
 
 --Write a query that returns the names of those students that are taking the courses Physics and US History
 
 SELECT student_name
 FROM students
 WHERE student_no IN(SELECT student_no FROM student_enrollment
-WHERE course_no IN(SELECT course_no FROM courses
-WHERE course_title IN('Physics','US History')));
+                    WHERE course_no IN(SELECT course_no FROM courses
+                                       WHERE course_title IN('Physics','US History')));
 
 SELECT first_name,salary,
-CASE
-    WHEN salary<100000 THEN 'UNDER PAID'
-    WHEN salary>100000 THEN 'PAID WELL'
-    ELSE 'UNPAID'
-END as category
+       CASE
+           WHEN salary<100000 THEN 'UNDER PAID'
+           WHEN salary>100000 THEN 'PAID WELL'
+           ELSE 'UNPAID'
+           END as category
 FROM employees;
 
 SELECT category,COUNT(*)
 FROM (SELECT first_name,
-            CASE
-                WHEN salary<100000 THEN 'UNDER PAID'
-                WHEN salary>100000 AND salary<160000 THEN 'PAID WELL'
-                ELSE 'EXECUTIVE'
-            END as category
-    FROM employees) a
+             CASE
+                 WHEN salary<100000 THEN 'UNDER PAID'
+                 WHEN salary>100000 AND salary<160000 THEN 'PAID WELL'
+                 ELSE 'EXECUTIVE'
+                 END as category
+      FROM employees) a
 GROUP BY category;
 
 SELECT first_name,country
@@ -319,21 +311,21 @@ WHERE r.region_id=e.region_id;
 SELECT first_name,email,division,d.department
 FROM employees e,departments d,regions r
 WHERE e.department = d.department
-AND e.region_id=r.region_id;
+  AND e.region_id=r.region_id;
 
 SELECT first_name,country
 FROM employees INNER JOIN regions
-ON employees.region_id=regions.region_id;
+                          ON employees.region_id=regions.region_id;
 
 SELECT  first_name,email,division
 FROM employees e INNER JOIN  departments d
-ON e.department=d.department
+                             ON e.department=d.department
 WHERE email IS NOT NULL;
 
 SELECT first_name,email,division,country
 FROM employees e INNER JOIN departments d
-ON e.department=d.department INNER JOIN  regions r
-ON e.region_id=r.region_id
+                            ON e.department=d.department INNER JOIN  regions r
+                                                                     ON e.region_id=r.region_id
 WHERE email IS NOT NULL;
 
 SELECT distinct department from employees;--31
@@ -341,15 +333,15 @@ SELECT distinct department from departments;--24
 
 SELECT distinct e.department,d.department
 FROM employees e LEFT JOIN  departments d
-ON e.department=d.department;
+                            ON e.department=d.department;
 
 SELECT distinct e.department,d.department
 FROM employees e RIGHT JOIN  departments d
-ON e.department=d.department;
+                             ON e.department=d.department;
 
 SELECT distinct e.department,d.department
 FROM employees e FULL JOIN  departments d
-ON e.department=d.department;
+                            ON e.department=d.department;
 
 SELECT department
 FROM employees
@@ -377,57 +369,3 @@ FROM employees
 EXCEPT
 SELECT department
 FROM departments;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
