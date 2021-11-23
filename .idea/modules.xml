@@ -22,6 +22,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/jd-spring.iml" filepath="$PROJECT_DIR$/.idea/jd-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-09-ORM-Mapping-OneToOne/orm2.iml" filepath="$PROJECT_DIR$/Spring-09-ORM-Mapping-OneToOne/orm2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-09-ORM-TableCreation/ormconfig.iml" filepath="$PROJECT_DIR$/Spring-09-ORM-TableCreation/ormconfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-09-ORM-OneToMany/ormonetomany.iml" filepath="$PROJECT_DIR$/Spring-09-ORM-OneToMany/ormonetomany.iml" />
     </modules>
   </component>
 </project>
