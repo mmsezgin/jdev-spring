@@ -10,6 +10,10 @@
     <file url="file://$PROJECT_DIR$/Spring-09-ORM-CinemaLab/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-09-ORM-DerivedQueries/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-09-ORM-DerivedQueries/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-09-ORM-Mapping-JPQL-NamedQueries/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-09-ORM-Mapping-JPQL-NamedQueries/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-09-ORM-Mapping-ManyToMany/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-09-ORM-Mapping-ManyToMany/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-09-ORM-Mapping-OneToOne/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-09-ORM-Mapping-OneToOne/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-09-ORM-OneToMany/src/main/java" charset="UTF-8" />

@@ -14,6 +14,7 @@
         <module name="Spring-06-JavaCode-Configuration" />
         <module name="Spring-06-JavaCode-PostConstruct-PreDestroy" />
         <module name="Spring-04-BeanLifeCycle" />
+        <module name="jpql" />
         <module name="Spring-01-SpringContainer" />
         <module name="ormonetomany" />
         <module name="derivedqueries" />
@@ -27,12 +28,15 @@
         <module name="orm2" />
         <module name="Spring-02-DI-ConstructorInjection" />
         <module name="Spring-08-SpringBoot-MVC-Model-View" />
+        <module name="manytomany" />
         <module name="Spring-05-JavaAnnotations-Qualifier" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cinemaapp" target="11" />
       <module name="derivedqueries" target="11" />
+      <module name="jpql" target="11" />
+      <module name="manytomany" target="11" />
       <module name="orm2" target="11" />
       <module name="ormconfig" target="11" />
       <module name="ormonetomany" target="11" />
@@ -63,6 +67,8 @@
       <module name="Spring-08-SpringBoot-MVC-Model-View" options="-parameters" />
       <module name="cinemaapp" options="-parameters" />
       <module name="derivedqueries" options="-parameters" />
+      <module name="jpql" options="-parameters" />
+      <module name="manytomany" options="-parameters" />
       <module name="orm2" options="-parameters" />
       <module name="ormconfig" options="-parameters" />
       <module name="ormonetomany" options="-parameters" />

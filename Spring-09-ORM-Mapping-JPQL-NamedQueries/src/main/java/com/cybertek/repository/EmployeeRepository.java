@@ -22,10 +22,12 @@ public interface EmployeeRepository extends JpaRepository<Employee,Long> {
     Integer getEmployeeSalary();
 
     //single bind paramater
+    //Positional bind parameter is specified by ?
     @Query("SELECT e FROM Employee e WHERE e.email = ?1 ")
     Optional<Employee> getEmployeeByEmail(String email);
 
     //multiple bind parameter
+    // 1 is assigned to email, 2 is assigned to salary
     @Query("SELECT e FROM Employee e WHERE e.email=?1 AND e.salary=?2")
     Employee getEmployeeByEmailAndSalary(String email,int salary);
 
@@ -36,6 +38,9 @@ public interface EmployeeRepository extends JpaRepository<Employee,Long> {
     //multiple named parameters
     @Query("SELECT e FROM Employee e WHERE e.firstName=:name OR e.salary=:salary")
     List<Employee> getEmployeeByFirstNameOrSalary(@Param("name") String name,@Param("salary") int salary);
+
+    @Query ("SELECT e FROM Employee e WHERE e.salary")
+    List<Employee> getEmployeesBySalary(@Param(("salary") String salary));
 
     //Not Equal
     @Query("SELECT e FROM Employee e WHERE e.salary <> ?1")
