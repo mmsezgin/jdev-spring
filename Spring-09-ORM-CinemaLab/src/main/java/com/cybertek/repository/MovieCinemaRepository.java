@@ -15,7 +15,7 @@ public interface MovieCinemaRepository extends JpaRepository<MovieCinema,Long> {
     // ------------------- DERIVED QUERIES ------------------- //
 
     //Write a derived query to read movie cinema with id
-
+    // Using Optional is more safe because it catches NullPointerException
     Optional<MovieCinema> findById(Long id);
 
     //Write a derived query to count all movie cinemas with a specific cinema id
