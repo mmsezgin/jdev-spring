@@ -44,6 +44,7 @@ public interface MovieCinemaRepository extends JpaRepository<MovieCinema,Long> {
     List<MovieCinema> fetchAllWithHigherSpecificDateJPQL(LocalDateTime dateTime);
 
 
+
     // ------------------- Native QUERIES ------------------- //
 
     //Write a native query to count all movie cinemas by cinema id

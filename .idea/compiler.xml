@@ -13,6 +13,7 @@
         <module name="Spring-07-SpringBoot-Demo" />
         <module name="Spring-06-JavaCode-Configuration" />
         <module name="Spring-06-JavaCode-PostConstruct-PreDestroy" />
+        <module name="security1" />
         <module name="Spring-04-BeanLifeCycle" />
         <module name="jpql" />
         <module name="Spring-01-SpringContainer" />
@@ -40,6 +41,7 @@
       <module name="orm2" target="11" />
       <module name="ormconfig" target="11" />
       <module name="ormonetomany" target="11" />
+      <module name="security1" target="11" />
       <module name="Spring-01-SpringContainer" target="1.8" />
       <module name="Spring-02-DI-ConstructorInjection" target="1.8" />
       <module name="Spring-02-DI-Setterinjection" target="1.8" />
@@ -72,6 +74,7 @@
       <module name="orm2" options="-parameters" />
       <module name="ormconfig" options="-parameters" />
       <module name="ormonetomany" options="-parameters" />
+      <module name="security1" options="-parameters" />
     </option>
   </component>
 </project>

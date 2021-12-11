@@ -18,6 +18,7 @@ public interface MovieRepository extends JpaRepository<Movie,Long> {
 
     // ------------------- DERIVED QUERIES ------------------- //
 
+
     //Write a derived query to read a movie with a name
     Optional<Movie> findByName(String name);
 
@@ -33,9 +34,11 @@ public interface MovieRepository extends JpaRepository<Movie,Long> {
     //Write a derived query to list all movies with a specific state and type
     List<Movie> findAllByStateAndType(MovieState movieState, MovieType movieType);
 
+
     // ------------------- JPQL QUERIES ------------------- //
 
     //Write a JPQL query to list all movies between a range of prices
+    // ?1 is the position of parameter i.e. price1
     @Query("SELECT m FROM Movie m WHERE m.price BETWEEN ?1 AND ?2")
     List<Movie> fetchAllBetweenPricesRange(BigDecimal price1,BigDecimal price2);
 
