@@ -28,11 +28,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .inMemoryAuthentication()
                 .withUser("admin").password(passwordEncoder().encode("admin123")).roles("ADMIN")
                 .and()
-                .withUser("ozzy").password(passwordEncoder().encode("ozzy123")).roles("USER");
+                .withUser("ozzy").password(passwordEncoder().encode("ozzy123")).roles("USER"); // password encoding is required in new versions. MUST ENCODE.
     }
 
     @Bean
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
-    }
+    } // Bcrypt is default.
 }
