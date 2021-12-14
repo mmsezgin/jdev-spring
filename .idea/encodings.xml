@@ -26,5 +26,6 @@
     <file url="file://$PROJECT_DIR$/Spring-10-Security-DefaultConfiguration/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-10-Security-HttpBasic-AutRoleBase/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-10-Security-HttpBasic-AutRoleBase/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-10-Security-HttpBasic-Database/src/main/java" charset="UTF-8" />
   </component>
 </project>
