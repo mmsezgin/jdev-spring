@@ -12,15 +12,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-
+    //Using antMatcher() we are specifying who will access what
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests() //request should be authorized
-                .antMatchers("index.html").permitAll()
-                .antMatchers("/profile/**").authenticated()
-                .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/management/**").hasAnyRole("ADMIN","MANAGER")
+                .antMatchers("index.html").permitAll()   // give access to everyone
+                .antMatchers("/profile/**").authenticated() // under profile directory, ask for credentials
+                .antMatchers("/admin/**").hasRole("ADMIN")  // under admin directory, every html page under admin, only to those whose role is admin
+                .antMatchers("/management/**").hasAnyRole("ADMIN","MANAGER") // TWO ROLES ACCESS : under manager directory, every html page under managerand admin, only to those whose role is admin
                 .and()
                 .httpBasic(); //perform basic http authentication
     }
@@ -33,7 +33,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .withUser("ozzy").password(passwordEncoder().encode("ozzy123")).roles("USER")
                 .and()
-                .withUser("manager").password(passwordEncoder().encode("manager123")).roles("MANAGER");
+                .withUser("manager").password(passwordEncoder().encode("manager123")).roles("MANAGER"); // Manager is created newly in this module. For manager role.
 
     }
 
