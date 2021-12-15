@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
+// Converts user entity to user details, don't know the user yet.
 public class UserPrincipal implements UserDetails {
 
     private User user;
@@ -17,20 +17,23 @@ public class UserPrincipal implements UserDetails {
         this.user = user;
     }
 
+    // getAuthorities() gets them permissions and roles from UserDetails interface
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+
+        // authorityList object is holding both permissions and roles.
 
         List<GrantedAuthority> authorityList = new ArrayList<>();
 
         //Extract list of permissions
-        user.getPermissionList().forEach(p -> {
-            GrantedAuthority authority = new SimpleGrantedAuthority(p);
+        user.getPermissionList().forEach(p -> {   //Get each authority, create one object from GrantedAuthority and add it.
+            GrantedAuthority authority = new SimpleGrantedAuthority(p); // SimpleGrantedAuthority accepts your authority from user details and adds it to your authority list
             authorityList.add(authority);
         });
 
         //Extract list of roles
-        user.getRoleList().forEach(r ->{
-            GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" +r);
+        user.getRoleList().forEach(r ->{ // For each role,
+            GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" +r); // ROLE_ spring understands it as role.
             authorityList.add(authority);
         });
 
