@@ -13,7 +13,7 @@ public class HomeController {
         return "/index";
     }
 
-    @GetMapping(value = {"/login","/"})
+    @GetMapping(value = {"/login","/"}) //either localhost or localhost:8080 take me to login page
     public String login(){
         return "login";
     }

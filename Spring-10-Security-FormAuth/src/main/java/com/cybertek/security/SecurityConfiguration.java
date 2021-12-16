@@ -25,13 +25,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests() //request should be authorized
 //                .antMatchers("index.html").permitAll()
                 .antMatchers("/profile/**").authenticated()
-                .antMatchers("/admin/**").hasAuthority("ADMIN")
-                .antMatchers("/management/**").hasAnyAuthority("ADMIN","MANAGER")
+                .antMatchers("/admin/**").hasAuthority("ADMIN")   //changed from hasRole("Admin")
+                .antMatchers("/management/**").hasAnyAuthority("ADMIN","MANAGER")  //changed from hasAnyRole ("Admin")
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/index")
-                .failureUrl("/login?error=true")
+                .defaultSuccessUrl("/index")  //if success login go to index.html
+                .failureUrl("/login?error=true") //if unsucccess login go to error
                 .permitAll()
                 .and()
                 .logout()

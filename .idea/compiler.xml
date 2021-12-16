@@ -25,6 +25,7 @@
         <module name="Spring-08-SpringBoot-MVC-Model-View" />
         <module name="Spring-07-SpringBoot-Ioc-DI-Lab" />
         <module name="securitydb" />
+        <module name="securityform" />
         <module name="ormonetomany" />
         <module name="derivedqueries" />
         <module name="Spring-05-JavaAnnotations-Component" />
@@ -48,6 +49,7 @@
       <module name="security2" target="11" />
       <module name="security2 (1)" target="11" />
       <module name="securitydb" target="11" />
+      <module name="securityform" target="11" />
       <module name="Spring-01-SpringContainer" target="1.8" />
       <module name="Spring-02-DI-ConstructorInjection" target="1.8" />
       <module name="Spring-02-DI-Setterinjection" target="1.8" />
@@ -84,6 +86,7 @@
       <module name="security2" options="-parameters" />
       <module name="security2 (1)" options="-parameters" />
       <module name="securitydb" options="-parameters" />
+      <module name="securityform" options="-parameters" />
     </option>
   </component>
 </project>
