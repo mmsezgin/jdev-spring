@@ -39,9 +39,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/login?logout=true")
                 .and()
                 .rememberMe()
-                .tokenValiditySeconds(120)
+                .tokenValiditySeconds(120)  //seconds for the remember me active
                 .key("cybertekSecret")
-                .userDetailsService(userPrincipalDetailsService);
+                .userDetailsService(userPrincipalDetailsService); // which user shall I remember, binds key and user
     }
 
     @Bean
