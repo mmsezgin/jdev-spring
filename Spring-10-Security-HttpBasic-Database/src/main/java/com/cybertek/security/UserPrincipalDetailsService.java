@@ -15,7 +15,7 @@ public class UserPrincipalDetailsService implements UserDetailsService {
     public UserPrincipalDetailsService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
-
+    // Bring the user from repository i.e. database
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(s);

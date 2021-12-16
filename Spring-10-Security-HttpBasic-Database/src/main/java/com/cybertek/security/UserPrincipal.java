@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 // Converts user entity to user details, don't know the user yet.
+// This is NOT a bean, it is a java class
 public class UserPrincipal implements UserDetails {
 
     private User user;
@@ -34,7 +35,7 @@ public class UserPrincipal implements UserDetails {
         //Extract list of roles
         user.getRoleList().forEach(r ->{ // For each role,
             GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" +r); // ROLE_ spring understands it as role.
-            authorityList.add(authority);
+            authorityList.add(authority);// hasRole () understands ROLE_ with underscore
         });
 
         return authorityList;
@@ -54,12 +55,12 @@ public class UserPrincipal implements UserDetails {
     @Override
     public boolean isAccountNonExpired() {
         return true;
-    }
+    } // default is true.
 
     @Override
     public boolean isAccountNonLocked() {
         return true;
-    }
+    } // default is true.
     // if forgot as false, it will not login and return empty username password screen
     @Override
     public boolean isCredentialsNonExpired() {
