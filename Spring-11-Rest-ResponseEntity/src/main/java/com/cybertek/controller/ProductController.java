@@ -28,17 +28,20 @@ public class ProductController {
     public ResponseEntity<Product> getProduct(@PathVariable("id") long id){
         return ResponseEntity.ok(productService.getProduct(id));
     }
-
+    // Pay attention to import org.springframework.http NOT java.net.http
     @GetMapping
     public  ResponseEntity<List<Product>> getProducts(){
+
+        // Making Http Header Creation using HttpHeaders
         HttpHeaders responseHttpHeaders = new HttpHeaders();
         responseHttpHeaders.set("Version","Cybertek.v1");
         responseHttpHeaders.set("Operation","Get List");
-
+        // status, header and body need to be passed ResponseEntity
+        //Most companies use ResponseEntity
         return ResponseEntity
                 .ok()
                 .headers(responseHttpHeaders)
-                .body(productService.getProducts());
+                .body(productService.getProducts()); // gives error if forgot to change the return type to ResponseEntity<List<Product>>
     }
 
     @PostMapping
