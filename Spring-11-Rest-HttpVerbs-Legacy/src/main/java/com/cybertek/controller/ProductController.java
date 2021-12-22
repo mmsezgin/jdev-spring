@@ -29,7 +29,7 @@ public class ProductController {
 
         return productService.getProducts();
     }
-
+    // LEGACY way of doing API
     @RequestMapping(value = "/products",method = RequestMethod.POST)
     public @ResponseBody List<Product> createProduct(@RequestBody Product product){
         return productService.createProduct(product);

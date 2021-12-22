@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//When we put @RestController we do NOT need @ResponseBody anymore.
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/products") // Newly added. class level @RequestMapping so change endpoints respectively
 public class ProductController {
 
     private ProductService productService;
@@ -18,6 +19,8 @@ public class ProductController {
         this.productService = productService;
     }
 
+    // @ResponseBody removed from return types in below methods
+    // @RequestMapping + PUT, POST, DELETE methods are changed with @GetMapping @PostMapping @DeleteMapping @PutMapping
     @GetMapping(value = "/{id}")
     public Product getProduct(@PathVariable("id") long id){
 
