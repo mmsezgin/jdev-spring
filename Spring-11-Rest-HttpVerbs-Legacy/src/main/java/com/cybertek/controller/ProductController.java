@@ -10,15 +10,16 @@ import java.util.List;
 
 @Controller
 public class ProductController {
-
+    // We need two things in API: Controller and ResponseBody
     private ProductService productService;
 
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
 
+    // Give me the id and will return certain product
     @RequestMapping(value = "/products/{id}",method = RequestMethod.GET)
-    public @ResponseBody Product getProduct(@PathVariable("id") long id){
+    public @ResponseBody Product getProduct(@PathVariable("id") long id){ // pay attention to return type
 
         return productService.getProduct(id);
     }
