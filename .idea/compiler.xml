@@ -24,6 +24,7 @@
         <module name="Spring-02-DI-ConstructorInjection" />
         <module name="Spring-08-SpringBoot-MVC-Model-View" />
         <module name="Spring-07-SpringBoot-Ioc-DI-Lab" />
+        <module name="rest1" />
         <module name="securitydb" />
         <module name="securityform" />
         <module name="ormonetomany" />
@@ -45,6 +46,7 @@
       <module name="orm2" target="11" />
       <module name="ormconfig" target="11" />
       <module name="ormonetomany" target="11" />
+      <module name="rest1" target="11" />
       <module name="security1" target="11" />
       <module name="security2" target="11" />
       <module name="security2 (1)" target="11" />
@@ -82,6 +84,7 @@
       <module name="orm2" options="-parameters" />
       <module name="ormconfig" options="-parameters" />
       <module name="ormonetomany" options="-parameters" />
+      <module name="rest1" options="-parameters" />
       <module name="security1" options="-parameters" />
       <module name="security2" options="-parameters" />
       <module name="security2 (1)" options="-parameters" />
