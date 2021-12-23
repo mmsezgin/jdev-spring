@@ -1,5 +1,6 @@
 package com.cybertek.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,6 +10,7 @@ import org.springframework.http.HttpStatus;
 @Setter
 @NoArgsConstructor
 // Describe here how JSON look like. Here CUSTOMIZED. This file might be under different folder other than entity
+@JsonInclude(JsonInclude.Include.NON_NULL)  //If it is NULL, ignore.
 public class ResponseWrapper {
 
     private boolean success;

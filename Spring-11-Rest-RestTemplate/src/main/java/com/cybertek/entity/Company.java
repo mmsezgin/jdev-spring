@@ -14,7 +14,7 @@ public class Company {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // We hide the id, except writing i.e. updating we need id. When we retrieve company, we will not see id.
     private Integer id;
 
     private String name;

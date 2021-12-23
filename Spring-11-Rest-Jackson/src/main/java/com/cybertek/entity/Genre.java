@@ -21,7 +21,7 @@ public class Genre extends BaseEntity {
     private String name;
 
     @ManyToMany(mappedBy = "genreList")
-    @JsonIgnore
+    @JsonIgnore  // We can use @JsonIgnore here, because it is ManyToMany relationship.
     private List<Movie> movieList = new ArrayList<>();
 
     public Genre(String name) {

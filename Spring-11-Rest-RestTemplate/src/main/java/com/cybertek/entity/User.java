@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Table(name="users")
-@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonIgnoreProperties(ignoreUnknown = true) // If the fields are NOT in the class below, IGNORE it.
 public class User {
 
     @Id
