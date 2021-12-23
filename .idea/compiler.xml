@@ -7,7 +7,39 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Spring-05-JavaAnnotations-Autowired" />
+        <module name="Spring-08-SpringBoot-MVC-Form" />
+        <module name="Spring-07-SpringBoot-Demo" />
+        <module name="Spring-06-JavaCode-Configuration" />
+        <module name="security1" />
+        <module name="Spring-06-JavaCode-PostConstruct-PreDestroy" />
+        <module name="Spring-04-BeanLifeCycle" />
+        <module name="jpql" />
+        <module name="Spring-01-SpringContainer" />
+        <module name="jackson" />
+        <module name="Spring-03-BeanScope-Singleton-Prototype" />
+        <module name="Spring-08-SpringBoot-MVC-Controller" />
+        <module name="ormconfig" />
+        <module name="security2 (2)" />
+        <module name="school" />
+        <module name="cinemaapp" />
+        <module name="Spring-02-DI-ConstructorInjection" />
+        <module name="Spring-08-SpringBoot-MVC-Model-View" />
         <module name="resttemplate" />
+        <module name="restresponseentity" />
+        <module name="Spring-07-SpringBoot-Ioc-DI-Lab" />
+        <module name="rest1" />
+        <module name="securitydb" />
+        <module name="securityform" />
+        <module name="ormonetomany" />
+        <module name="derivedqueries" />
+        <module name="Spring-05-JavaAnnotations-Component" />
+        <module name="security2 (1)" />
+        <module name="Spring-05-Value" />
+        <module name="Spring-02-DI-Setterinjection" />
+        <module name="orm2" />
+        <module name="manytomany" />
+        <module name="Spring-05-JavaAnnotations-Qualifier" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,9 +54,11 @@
       <module name="rest1" target="11" />
       <module name="restresponseentity" target="11" />
       <module name="resttemplate" target="11" />
+      <module name="school" target="11" />
       <module name="security1" target="11" />
       <module name="security2" target="11" />
       <module name="security2 (1)" target="11" />
+      <module name="security2 (2)" target="11" />
       <module name="securitydb" target="11" />
       <module name="securityform" target="11" />
       <module name="Spring-01-SpringContainer" target="1.8" />
@@ -63,9 +97,11 @@
       <module name="rest1" options="-parameters" />
       <module name="restresponseentity" options="-parameters" />
       <module name="resttemplate" options="-parameters" />
+      <module name="school" options="-parameters" />
       <module name="security1" options="-parameters" />
       <module name="security2" options="-parameters" />
       <module name="security2 (1)" options="-parameters" />
+      <module name="security2 (2)" options="-parameters" />
       <module name="securitydb" options="-parameters" />
       <module name="securityform" options="-parameters" />
     </option>

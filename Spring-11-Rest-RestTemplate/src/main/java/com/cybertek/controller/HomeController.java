@@ -40,8 +40,8 @@ public class HomeController {
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
         headers.set("app-id","lTE5abbDxdjGplutvTuc");
 
-        HttpEntity<String> entity = new HttpEntity<>(headers);
-
+        HttpEntity<String> entity = new HttpEntity<>(headers); // need to create this line to convert headers to http
+        //exchange() is also one of the most used methods in RestTemplate
         ResponseEntity<Object> response = restTemplate.exchange("https://dummyapi.io/data/api/user?limit=10", HttpMethod.GET,entity,Object.class);
 
         return response;

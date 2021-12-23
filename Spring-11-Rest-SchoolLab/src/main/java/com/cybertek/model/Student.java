@@ -38,7 +38,7 @@ public class Student extends BaseEntity {
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JoinColumn(name = "address_id")
     private Address address;
-
+    // Because we use ManyToOne here, we do not need to mention in Parent class
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     private Parent parent;

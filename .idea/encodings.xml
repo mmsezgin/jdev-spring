@@ -2,12 +2,17 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Spring-07-SpringBoot-Demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-07-SpringBoot-Demo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-07-SpringBoot-Ioc-DI-Lab/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-07-SpringBoot-Ioc-DI-Lab/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-08-SpringBoot-MVC-Controller/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-08-SpringBoot-MVC-Controller/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-08-SpringBoot-MVC-Form/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-08-SpringBoot-MVC-Form/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-08-SpringBoot-MVC-Model-View(Thymeleaf)/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-08-SpringBoot-MVC-Model-View(Thymeleaf)/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-09-ORM-CinemaLab/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-09-ORM-CinemaLab/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-09-ORM-DerivedQueries/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-09-ORM-DerivedQueries/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-09-ORM-Mapping-JPQL-NamedQueries/src/main/java" charset="UTF-8" />
@@ -25,9 +30,11 @@
     <file url="file://$PROJECT_DIR$/Spring-10-Security-DefaultConfiguration/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-10-Security-DefaultConfiguration/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-10-Security-FormAuth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-10-Security-FormAuth/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-10-Security-HttpBasic-AutRoleBase/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-10-Security-HttpBasic-AutRoleBase/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-10-Security-HttpBasic-Database/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-10-Security-HttpBasic-Database/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-11-Rest-HttpVerbs-Legacy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-11-Rest-HttpVerbs-Legacy/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-11-Rest-Jackson/src/main/java" charset="UTF-8" />
@@ -35,5 +42,7 @@
     <file url="file://$PROJECT_DIR$/Spring-11-Rest-ResponseEntity/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-11-Rest-RestTemplate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring-11-Rest-RestTemplate/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-11-Rest-SchoolLab/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-11-Rest-SchoolLab/src/main/resources" charset="UTF-8" />
   </component>
 </project>
