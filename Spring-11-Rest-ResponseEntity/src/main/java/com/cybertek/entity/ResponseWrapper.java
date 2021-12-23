@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 @Getter
 @Setter
 @NoArgsConstructor
+// Describe here how JSON look like. Here CUSTOMIZED. This file might be under different folder other than entity
 public class ResponseWrapper {
 
     private boolean success;
