@@ -17,7 +17,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name = "account_details")
 @ToString
-@JsonIgnoreProperties(value = {"state","postalCode"},ignoreUnknown = true)
+@JsonIgnoreProperties(value = {"state","postalCode"},ignoreUnknown = true) // put all the properties that u dont want to show in JSON
 public class Account extends BaseEntity {
 
     private String name;
@@ -33,7 +33,7 @@ public class Account extends BaseEntity {
     private UserRole role = UserRole.USER;
 
     @OneToOne(mappedBy = "account")
-    @JsonBackReference
+    @JsonBackReference  //When I called account, Include user information with account
     private User user;
 
 
