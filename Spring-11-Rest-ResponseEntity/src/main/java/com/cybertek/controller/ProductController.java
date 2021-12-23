@@ -13,7 +13,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+// HttpHeaderCreation are done in three ways in below methods
 @RestController
 @RequestMapping("/products")
 public class ProductController {
@@ -24,6 +24,7 @@ public class ProductController {
         this.productService = productService;
     }
 
+    // Check same method in Spring-11-Rest-HttpVerbs-Preferred, doing same job, but this is the most preferred way
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public ResponseEntity<Product> getProduct(@PathVariable("id") long id){
         return ResponseEntity.ok(productService.getProduct(id));
@@ -48,7 +49,7 @@ public class ProductController {
     public  ResponseEntity<List<Product>> createProduct(@RequestBody Product product){
 
         List<Product> set = productService.createProduct(product);
-
+        // Check the method above, below same things done in different way than the method above
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .header("Version","Cybertek.V1")
@@ -67,7 +68,7 @@ public class ProductController {
 
        return new ResponseEntity<>(list,responseHttpHeaders,HttpStatus.OK);
     }
-
+    // This method is created using MultiValueMap
     @PutMapping(value = "/{id}")
     public  ResponseEntity<List<Product>> updateProduct(@PathVariable("id") long id,@RequestBody Product product){
 
