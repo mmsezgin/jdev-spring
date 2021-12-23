@@ -15,6 +15,8 @@ public class ResttemplateApplication {
 		SpringApplication.run(ResttemplateApplication.class, args);
 	}
 
+	// RestTemplate library is for consuming API
+	//
 	@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder){
 		return builder

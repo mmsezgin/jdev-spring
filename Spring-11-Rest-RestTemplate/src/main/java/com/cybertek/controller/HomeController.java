@@ -13,20 +13,20 @@ import java.util.List;
 @RestController
 public class HomeController {
 
-    final String URI = "https://jsonplaceholder.typicode.com/users";
+    final String URI = "https://jsonplaceholder.typicode.com/users";  // URI of the API data
 
     private RestTemplate restTemplate;
 
     public HomeController(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
-
+    // APIs
     @GetMapping
     public User[] readAllUsers(){
-        ResponseEntity<User[]> responseEntity = restTemplate.getForEntity(URI,User[].class);
+        ResponseEntity<User[]> responseEntity = restTemplate.getForEntity(URI,User[].class);  // getForEntity() method is returning array, so return type must be an array.
         return responseEntity.getBody();
     }
-
+    // http://localhost:8080/9 put in GET in PostMan retrieves user id=9
     @GetMapping(value = "/{id}")
     public Object readUser(@PathVariable("id") Integer id){
         String URL = URI + "/{id}";
