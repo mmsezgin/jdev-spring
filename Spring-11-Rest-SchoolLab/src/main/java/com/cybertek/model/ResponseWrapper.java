@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseWrapper {
-
+    // Using this class, we want API to show below information
     private boolean success;
     private String message;
     private Integer code;

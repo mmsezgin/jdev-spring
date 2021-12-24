@@ -18,7 +18,7 @@ import java.util.Optional;
 @RestController
 public class ApiController {
 
-
+    // Inject the repositories under repository folder
     private TeacherRepository teacherRepository;
     private StudentRepository studentRepository;
     private ParentRepository parentRepository;
@@ -38,7 +38,7 @@ public class ApiController {
 
     @GetMapping("/students")
     public ResponseEntity<ResponseWrapper> readAllStudents(){
-
+        // ResponseWrapper usage did not work
         return ResponseEntity
                 .ok(new ResponseWrapper("students are successfully retrieved",studentRepository.findAll()));
     }
