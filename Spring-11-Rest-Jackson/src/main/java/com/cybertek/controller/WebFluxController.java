@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
 
 @RestController
 public class WebFluxController {
-
+                                                            //localhost:8080 is the API we are consuming
     private WebClient webClient = WebClient.builder().baseUrl("http://localhost:8080").build();
 
     private MovieCinemaRepository movieCinemaRepository;
@@ -24,12 +24,13 @@ public class WebFluxController {
         this.movieCinemaRepository = movieCinemaRepository;
         this.genreRepository = genreRepository;
     }
-
+    //Flux as it is returning more than one
     @GetMapping("/flux-movie-cinemas")
     public Flux<MovieCinema> readAllCinemaFlux(){
         return Flux.fromIterable(movieCinemaRepository.findAll());
     }
 
+    //Mono as it is returning one
     @GetMapping("/mono-movie-cinema/{id}")
     public Mono<MovieCinema> readyById(@PathVariable("id") Long id){
         return Mono.just(movieCinemaRepository.findById(id).get());

@@ -38,7 +38,7 @@ public class ApiController {
 
     @GetMapping("/students")
     public ResponseEntity<ResponseWrapper> readAllStudents(){
-        // ResponseWrapper usage did not work
+        // ResponseWrapper usage did not work. readAllParents() used ResponseWrapper. Different implementations, either ones can be used.
         return ResponseEntity
                 .ok(new ResponseWrapper("students are successfully retrieved",studentRepository.findAll()));
     }
@@ -61,8 +61,9 @@ public class ApiController {
         if(!foundAddress.isPresent()){
             throw new Exception("Address does not exists!");
         }
-
+        //Updating city, based on new city temp need to be updated
         address.setCurrentTemperature(new Address().consumeTemp(address.getCity()));
+        // set the id to repository
         address.setId(foundAddress.get().getId());
 
         return addressRepository.save(address);

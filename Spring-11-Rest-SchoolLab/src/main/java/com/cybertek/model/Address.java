@@ -49,6 +49,7 @@ public class Address extends BaseEntity {
 //        return consumeTemp(this.city);
 //    }
 
+    // commented out the above lines, because we want to get the temperature from API
     public Integer consumeTemp(String city){
 
         RestTemplate restTemplate = new RestTemplate();

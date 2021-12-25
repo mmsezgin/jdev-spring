@@ -23,10 +23,11 @@ public class HomeController {
     // APIs
     @GetMapping
     public User[] readAllUsers(){
-        ResponseEntity<User[]> responseEntity = restTemplate.getForEntity(URI,User[].class);  // getForEntity() method is returning array, so return type must be an array.
+        ResponseEntity<User[]> responseEntity = restTemplate.getForEntity(URI,User[].class);
+        // getForEntity() method is returning array, so return type must be an array.
+
         return responseEntity.getBody();
     }
-    // http://localhost:8080/9 put in GET in PostMan retrieves user id=9
     @GetMapping(value = "/{id}")
     public Object readUser(@PathVariable("id") Integer id){
         String URL = URI + "/{id}";
