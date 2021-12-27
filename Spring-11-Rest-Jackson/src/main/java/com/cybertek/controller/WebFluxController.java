@@ -62,12 +62,13 @@ public class WebFluxController {
 
 
     //--------------------------- WEBCLIENT EXAMPLE--------------------
+    // Below we consume API through WebClient
 
     @GetMapping("/flux")
     public Flux<MovieCinema> readWithWebClient(){
         return webClient
                 .get()
-                .uri("/flux-movie-cinemas")
+                .uri("/flux-movie-cinemas") //baseURI is in the above code portion so just put endpoint THIRDPARTY API to be consumed can be put here.
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .retrieve()
                 .bodyToFlux(MovieCinema.class);
