@@ -73,7 +73,7 @@ public class WebFluxController {
                 .retrieve()
                 .bodyToFlux(MovieCinema.class);
     }
-
+    //Getting the parameter via pathvariable
     @GetMapping("/mono/{id}")
     public Mono<MovieCinema> redMonoWithWebClient(@PathVariable("id") Long id){
         return  webClient
@@ -83,7 +83,7 @@ public class WebFluxController {
                 .bodyToMono(MovieCinema.class);
 
     }
-
+    // Using query parameters. For query param we need to use uri and uri builder
     @GetMapping("/mono-rp")
     public Mono<MovieCinema> readMonoWithWebclientRequestParam(@RequestParam("id") Long id){
         return webClient
@@ -103,7 +103,7 @@ public class WebFluxController {
         return webClient
                 .post()
                 .uri("/create-genre")
-                .body(Mono.just(genre),Genre.class)
+                .body(Mono.just(genre),Genre.class)//Passing Genre object as body
                 .retrieve()
                 .bodyToMono(Genre.class);
     }

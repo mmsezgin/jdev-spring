@@ -25,6 +25,7 @@ public class UserController {
 
     @GetMapping
     @Operation(summary = "Read all users")
+    // API Responses created in for swagger
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",description = "Successfully retrieved",content = {@Content(mediaType = "application/json",schema = @Schema(implementation = User.class))}),
             @ApiResponse(responseCode = "400",description = "Something went wrong",content = @Content),

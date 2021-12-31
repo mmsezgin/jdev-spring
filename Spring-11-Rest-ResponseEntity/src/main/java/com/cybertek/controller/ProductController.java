@@ -90,6 +90,7 @@ public class ProductController {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<ResponseWrapper> deleteProduct2(@PathVariable("id") long id){
+        productService.delete(id); //forgotten in the Ozzy's code.
         return ResponseEntity.ok(new ResponseWrapper("product successfully deleted"));
     }
 

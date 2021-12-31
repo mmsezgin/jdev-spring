@@ -11,6 +11,7 @@ import java.util.List;
 @Controller
 public class ProductController {
     // We need two things in API: Controller and ResponseBody
+    // Uses legacy old version @Controller and ResponseBody
     private ProductService productService;
 
     public ProductController(ProductService productService) {

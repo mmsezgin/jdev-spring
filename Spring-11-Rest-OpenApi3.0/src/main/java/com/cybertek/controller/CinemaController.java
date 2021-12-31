@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cinema")
+// @Tag creates name and description in swagger
 @Tag(name = "Cinema",description = "Cinema API")
 public class CinemaController {
 
@@ -20,7 +21,7 @@ public class CinemaController {
     private CinemaRepository cinemaRepository;
 
     @GetMapping
-    @Operation(summary = "Read all cinemas")
+    @Operation(summary = "Read all cinemas") //
     public List<Cinema> readAll(){
         return cinemaRepository.findAll();
     }

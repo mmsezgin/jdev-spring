@@ -28,6 +28,7 @@
         <module name="resttemplate" />
         <module name="restresponseentity" />
         <module name="Spring-07-SpringBoot-Ioc-DI-Lab" />
+        <module name="openapi" />
         <module name="rest1" />
         <module name="securitydb" />
         <module name="securityform" />
@@ -48,6 +49,7 @@
       <module name="jackson" target="11" />
       <module name="jpql" target="11" />
       <module name="manytomany" target="11" />
+      <module name="openapi" target="11" />
       <module name="orm2" target="11" />
       <module name="ormconfig" target="11" />
       <module name="ormonetomany" target="11" />
@@ -91,6 +93,7 @@
       <module name="jackson" options="-parameters" />
       <module name="jpql" options="-parameters" />
       <module name="manytomany" options="-parameters" />
+      <module name="openapi" options="-parameters" />
       <module name="orm2" options="-parameters" />
       <module name="ormconfig" options="-parameters" />
       <module name="ormonetomany" options="-parameters" />
