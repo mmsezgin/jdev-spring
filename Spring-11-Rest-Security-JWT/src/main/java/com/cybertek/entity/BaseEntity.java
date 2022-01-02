@@ -18,9 +18,9 @@ public class BaseEntity {
 
     @Column(name = "is_deleted")
     private Boolean isDeleted;
-
+    // Put JsonIgnore for items not to see in API
     @JsonIgnore
-    @Column(name = "create_date",nullable = false,updatable = false)
+    @Column(name = "create_date",nullable = false,updatable = false) // if we do not have it in database, when we update, it will be null. This is to skip the first value.
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
 

@@ -10,6 +10,7 @@
         <module name="Spring-05-JavaAnnotations-Autowired" />
         <module name="Spring-08-SpringBoot-MVC-Form" />
         <module name="Spring-07-SpringBoot-Demo" />
+        <module name="jwt" />
         <module name="Spring-06-JavaCode-Configuration" />
         <module name="security1" />
         <module name="Spring-06-JavaCode-PostConstruct-PreDestroy" />
@@ -48,6 +49,7 @@
       <module name="derivedqueries" target="11" />
       <module name="jackson" target="11" />
       <module name="jpql" target="11" />
+      <module name="jwt" target="11" />
       <module name="manytomany" target="11" />
       <module name="openapi" target="11" />
       <module name="orm2" target="11" />
@@ -92,6 +94,7 @@
       <module name="derivedqueries" options="-parameters" />
       <module name="jackson" options="-parameters" />
       <module name="jpql" options="-parameters" />
+      <module name="jwt" options="-parameters" />
       <module name="manytomany" options="-parameters" />
       <module name="openapi" options="-parameters" />
       <module name="orm2" options="-parameters" />

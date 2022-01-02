@@ -23,6 +23,7 @@
       <module fileurl="file://$PROJECT_DIR$/Spring-11-Rest-Jackson/jackson.iml" filepath="$PROJECT_DIR$/Spring-11-Rest-Jackson/jackson.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/jd-spring.iml" filepath="$PROJECT_DIR$/.idea/jd-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-09-ORM-Mapping-JPQL-NamedQueries/jpql.iml" filepath="$PROJECT_DIR$/Spring-09-ORM-Mapping-JPQL-NamedQueries/jpql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-11-Rest-Security-JWT/jwt.iml" filepath="$PROJECT_DIR$/Spring-11-Rest-Security-JWT/jwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-09-ORM-Mapping-ManyToMany/manytomany.iml" filepath="$PROJECT_DIR$/Spring-09-ORM-Mapping-ManyToMany/manytomany.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-11-Rest-OpenApi3.0/openapi.iml" filepath="$PROJECT_DIR$/Spring-11-Rest-OpenApi3.0/openapi.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-09-ORM-Mapping-OneToOne/orm2.iml" filepath="$PROJECT_DIR$/Spring-09-ORM-Mapping-OneToOne/orm2.iml" />

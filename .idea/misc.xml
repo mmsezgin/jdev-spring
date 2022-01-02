@@ -37,6 +37,7 @@
         <option value="$PROJECT_DIR$/Spring-11-Rest-RestTemplate/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-11-Rest-SchoolLab/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-11-Rest-OpenApi3.0/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-11-Rest-Security-JWT/pom.xml" />
       </list>
     </option>
   </component>
