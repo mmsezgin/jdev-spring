@@ -12,13 +12,14 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
-
+//We can use anyname other than JWTUtil
+// As a best practice, some companies create utils folder and put it under this folder
 @Component
 public class JWTUtil {
 
     @Value("${security.jwt.secret-key}")
     private String secret = "cybertek";
-
+    // Creating payload here
     public String generateToken(User user){
 
         Map<String,Object> claims = new HashMap<>();
@@ -60,7 +61,7 @@ public class JWTUtil {
     private Boolean isTokenExpired(String token){
         return extractExpiration(token).before(new Date());
     }
-
+    // Why UserDetails not User? To able to validate we need UserDetails.
     public Boolean validateToken(String token, UserDetails userDetails){
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
