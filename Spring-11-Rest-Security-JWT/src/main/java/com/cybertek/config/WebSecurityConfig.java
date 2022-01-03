@@ -16,7 +16,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private SecurityFilter securityFilter;
-
+    // Because we do not have form authentication, we need to add authenticationManagerBean()
+    // Normally we have login info under config() method but authenticationManagerBean() handles for us.
     @Override
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
@@ -39,8 +40,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception{
 
         http
-                .csrf()
-                .disable()
+                .csrf()//cross-site request forgery attack. Sb trying to get your token and mimic your activities.
+                .disable() // For API purposes make disable, otherwise gives error.
                 .authorizeRequests()
                 .antMatchers(permittedUrls)
                 .permitAll()
