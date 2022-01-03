@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
-
+// UserService is only working with repository
 @Service
 public class UserService {
 
@@ -49,16 +49,17 @@ public class UserService {
         user.setIsDeleted(false);
         return userRepository.save(user);
     }
-
+    //
     @Transactional
     public User verifyUser(User user) {
         user.setIsVerified(true);
         user.setState(UserState.ACTIVE);
         return userRepository.save(user);
     }
+    //
     @Transactional
     public void deleteUser(Integer id) throws ServiceException {
-
+        //Checks if user exists or not.
         User user = userRepository.findById(id).orElse(null);
         if (user == null) {
             throw new ServiceException("This user does not exist");
