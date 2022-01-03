@@ -39,7 +39,7 @@ public class JWTUtil {
                 .signWith(SignatureAlgorithm.HS256,secret).compact();
 
     }
-
+    // First we need to DECODE the TOKEN
     private Claims extractAllClaims(String token){
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
     }

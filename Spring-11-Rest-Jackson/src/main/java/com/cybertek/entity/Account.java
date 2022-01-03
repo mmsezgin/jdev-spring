@@ -34,6 +34,8 @@ public class Account extends BaseEntity {
 
     @OneToOne(mappedBy = "account")
     @JsonBackReference  //When I called account, Include user information with account
+    // @JsonBackReference ve @JsonManagedReference comment out, it will enter into loop, account inside user, user inside account...gives stack over flow error.
+    // Having @JsonManagedReference and @JsonManagedReference will break the loop
     private User user;
 
 

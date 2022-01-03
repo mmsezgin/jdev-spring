@@ -30,6 +30,8 @@ public class User extends BaseEntity {
     @OneToOne(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     @JoinColumn(name = "account_details_id")
     @JsonManagedReference //when I call user, you do NOT need to show account. We can NOT use JsonIgnore here,it will break.
+    // @JsonBackReference ve @JsonManagedReference comment out, it will enter into loop, account inside user, user inside account...gives stack over flow error.
+    // Having @JsonManagedReference and @JsonManagedReference will break the loop
     private Account account;
 
     public User(String email, String password, String username) {

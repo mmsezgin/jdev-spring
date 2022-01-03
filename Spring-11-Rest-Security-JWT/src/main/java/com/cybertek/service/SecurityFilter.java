@@ -26,8 +26,9 @@ public class SecurityFilter extends OncePerRequestFilter {
         this.jwtUtil = jwtUtil;
         this.securityService = securityService;
     }
-    // ready code. After retrieving this token, checking all validations, this ready code is doing filtering
+    // After retrieving this token, checking all validations, this ready code is doing filtering
     // Making all validations or filtering
+    // Filtering = if the user is valid, if the token is valid, if the token expiration date or status is valid etc
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest,
                                     HttpServletResponse httpServletResponse,
