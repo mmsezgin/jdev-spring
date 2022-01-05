@@ -38,7 +38,8 @@ public class AuthenticationController {
         String username = authenticationRequest.getUsername();
         // Get the username from requestbody, retrieve from db and give it to JWTUtil to create and generate token
         User foundUser = userService.readByUsername(username);
-
+        // Authentication is done here. In MVC, behind the scenes of form login Spring does for us
+        // Below two line make manual authentication
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username,password);
         authenticationManager.authenticate(authenticationToken);
 
