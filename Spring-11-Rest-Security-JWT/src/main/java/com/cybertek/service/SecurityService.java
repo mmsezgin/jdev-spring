@@ -21,7 +21,7 @@ public class SecurityService implements UserDetailsService {
         this.userService = userService;
     }
     // Which user is it, tell me and I will find the user and load
-    // Get the user from database, and convert it to user that Spring understands.
+    // loadByUserName() function differently here. Get the user from database, and convert it to Spring User
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
 

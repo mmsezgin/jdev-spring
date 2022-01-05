@@ -36,7 +36,7 @@ public class AuthenticationController {
 
         String password = authenticationRequest.getPassword();
         String username = authenticationRequest.getUsername();
-
+        // Get the username from requestbody, retrieve from db and give it to JWTUtil to create and generate token
         User foundUser = userService.readByUsername(username);
 
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username,password);

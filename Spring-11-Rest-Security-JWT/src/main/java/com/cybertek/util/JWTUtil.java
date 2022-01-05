@@ -19,6 +19,7 @@ public class JWTUtil {
 
     @Value("${security.jwt.secret-key}")
     private String secret = "cybertek";
+    //Why? create and generate token separate? We do not want to mix payload with token
     // Creating payload here
     public String generateToken(User user){
 
@@ -27,7 +28,7 @@ public class JWTUtil {
         claims.put("email",user.getEmail());
         return createToken(claims,user.getUsername());
     }
-
+    // createToken steps are fixed for Spring
     private String createToken(Map<String,Object> claims,String username){
 
         return Jwts
@@ -39,7 +40,7 @@ public class JWTUtil {
                 .signWith(SignatureAlgorithm.HS256,secret).compact();
 
     }
-    // First we need to DECODE the TOKEN
+    // First we need to DECODE the TOKEN. These code snippets are from Spring documentation
     private Claims extractAllClaims(String token){
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
     }

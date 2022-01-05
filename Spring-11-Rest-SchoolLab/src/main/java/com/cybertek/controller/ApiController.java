@@ -32,9 +32,7 @@ public class ApiController {
     }
 
     @GetMapping("/teachers")
-    public List<Teacher> redAllTeachers(){
-        return teacherRepository.findAll();
-    }
+    public List<Teacher> redAllTeachers(){ return teacherRepository.findAll(); }
 
     @GetMapping("/students")
     public ResponseEntity<ResponseWrapper> readAllStudents(){
@@ -56,10 +54,10 @@ public class ApiController {
     @PutMapping("/address/{id}")
     public Address updateAddress(@PathVariable("id") long id, @RequestBody Address address) throws Exception {
 
-        Optional<Address> foundAddress = addressRepository.findById(id);
+        Optional<Address> foundAddress = addressRepository.findById(id); // Optional<Address> yerine var ne döndüğü ortaya çıkıyor.
 
         if(!foundAddress.isPresent()){
-            throw new Exception("Address does not exists!");
+            throw new Exception("Address does not exist!");
         }
         //Updating city, based on new city temp need to be updated
         address.setCurrentTemperature(new Address().consumeTemp(address.getCity()));

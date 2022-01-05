@@ -60,11 +60,12 @@ public class Address extends BaseEntity {
 
         Object currentWeather = restTemplate.getForObject(uri,Object.class);
 
-        Map<String,Object> getWeather = (Map<String,Object>) currentWeather;
+        Map<String,Object> getWeather = (Map<String,Object>) currentWeather; // In key we have string, value is object
 
         Map<String,Object> getTemperature = (Map<String, Object>) getWeather.get("current");
 
         return Integer.parseInt(getTemperature.get("temperature").toString());
+
 
 
     }

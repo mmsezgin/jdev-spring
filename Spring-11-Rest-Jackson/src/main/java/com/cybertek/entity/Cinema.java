@@ -17,6 +17,8 @@ import javax.persistence.ManyToOne;
 @Getter
 @NoArgsConstructor
 // Naming enables us to decide how this field looks like in JSON
+// PropertyNamingStrategy changed to PropertyNamingStrategies  !!!!!
+// SnakeCaseStrategy is mentioned below, so need to write hibernate_Lazy_Initializer with underscores
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 @JsonIgnoreProperties(value={"hibernate_Lazy_Initializer"},ignoreUnknown = true)
 public class Cinema extends BaseEntity {

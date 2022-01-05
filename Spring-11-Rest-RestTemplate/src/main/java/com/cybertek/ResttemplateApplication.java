@@ -16,7 +16,7 @@ public class ResttemplateApplication {
 	}
 
 	// RestTemplate library is for consuming API
-	//
+	// This is the bean to consume
 	@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder){
 		return builder

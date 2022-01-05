@@ -47,7 +47,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .anyRequest()
                 .authenticated();
-
+        // RUN THE SECURITY FILTER BEFORE ANY API CALL
         http.addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class); //
 
 

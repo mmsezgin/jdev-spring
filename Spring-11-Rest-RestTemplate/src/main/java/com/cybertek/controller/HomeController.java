@@ -13,14 +13,14 @@ import java.util.List;
 @RestController
 public class HomeController {
 
-    final String URI = "https://jsonplaceholder.typicode.com/users";  // URI of the API data
+    final String URI = "https://jsonplaceholder.typicode.com/users";  // URI of the API data that we consume
 
     private RestTemplate restTemplate;
 
     public HomeController(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
-    // APIs
+    // if sb write /api bring all users. Make sure to uncomment out the ...api line.
     @GetMapping
     public User[] readAllUsers(){
         ResponseEntity<User[]> responseEntity = restTemplate.getForEntity(URI,User[].class);
@@ -39,11 +39,13 @@ public class HomeController {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        headers.set("app-id","lTE5abbDxdjGplutvTuc");
+        headers.set("app-id","61c2e109f58bec8104ea759d");
 
         HttpEntity<String> entity = new HttpEntity<>(headers); // need to create this line to convert headers to http
-        //exchange() is also one of the most used methods in RestTemplate
-        ResponseEntity<Object> response = restTemplate.exchange("https://dummyapi.io/data/api/user?limit=10", HttpMethod.GET,entity,Object.class);
+        //exchange() is also one of the most used methods in RestTemplate.
+        // exchange () is to send headers
+        // Go to the below website and get app id and change it below
+        ResponseEntity<Object> response = restTemplate.exchange("https://dummyapi.io/data/v1/user?limit=10", HttpMethod.GET,entity,Object.class);
 
         return response;
 
