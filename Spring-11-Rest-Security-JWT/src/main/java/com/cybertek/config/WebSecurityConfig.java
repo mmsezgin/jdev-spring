@@ -23,7 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-
+    // instead of putting so many endpoints like /authenticate /create-user we can create a method
     private static final String[] permittedUrls ={
             "/authenticate",
             "/create-user",

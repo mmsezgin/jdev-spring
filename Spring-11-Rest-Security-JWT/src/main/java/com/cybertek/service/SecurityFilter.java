@@ -39,7 +39,7 @@ public class SecurityFilter extends OncePerRequestFilter {
         String username = null;
 
         if (authorizationHeader != null) {
-            token = authorizationHeader.replace("Bearer","");
+            token = authorizationHeader.replace("Bearer","");// In OpenAPI it comes with Bearer by default, so it is replacing this.
             username = jwtUtil.extractUsername(token);
         }
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
