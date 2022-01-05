@@ -21,6 +21,7 @@ public class OpenApiConfig {
         securitySchemeItem.setBearerFormat("JWT");
         securitySchemeItem.setIn(SecurityScheme.In.HEADER);
         securitySchemeItem.setName("Authorization");
+        //info object below
         io.swagger.v3.oas.models.info.Info infoVersion = new io.swagger.v3.oas.models.info.Info().title("Cybertek API").version("snapshot");
         SecurityRequirement securityItem = new SecurityRequirement().addList("bearer-jwt", Arrays.asList("read","write"));
 

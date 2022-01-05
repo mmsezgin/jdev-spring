@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Tag(name = "Authenticate controller",description = "Authenticate API")
+@Tag(name = "Authenticate controller",description = "Authenticate API")  //Tag for API document
 public class AuthenticationController {
 
     @Autowired
@@ -30,15 +30,15 @@ public class AuthenticationController {
 
 
     @PostMapping("/authenticate")
-    @DefaultExceptionMessage(defaultMessage = "Bad Credentials")
-    @Operation(summary = "Login to application")
+    @DefaultExceptionMessage(defaultMessage = "Bad Credentials")  //If any exception happens belongs to generic stuff, take default exception message here.
+    @Operation(summary = "Login to application") // Summary for API document
     public ResponseEntity<ResponseWrapper> doLogin(@RequestBody AuthenticationRequest authenticationRequest){
 
         String password = authenticationRequest.getPassword();
         String username = authenticationRequest.getUsername();
         // Get the username from requestbody, retrieve from db and give it to JWTUtil to create and generate token
         User foundUser = userService.readByUsername(username);
-        // Authentication is done here. In MVC, behind the scenes of form login Spring does for us
+        // Authentication is done here. In MVC, behind the scenes of .formlogin Spring does for us
         // Below two line make manual authentication
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username,password);
         authenticationManager.authenticate(authenticationToken);

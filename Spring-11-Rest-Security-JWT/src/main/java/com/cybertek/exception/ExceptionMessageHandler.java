@@ -18,6 +18,7 @@ import java.util.Optional;
 
 @RestControllerAdvice
 @Order(Ordered.HIGHEST_PRECEDENCE)
+// This is our custom exception handler.
 public class ExceptionMessageHandler {
 
     @ExceptionHandler(ServiceException.class)

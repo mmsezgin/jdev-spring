@@ -2,7 +2,7 @@ package com.cybertek.service;
 
 import com.cybertek.entity.User;
 import com.cybertek.enums.UserState;
-import com.cybertek.exception.ServiceException;
+import com.cybertek.exception.ServiceException;  // pay attention to import this. Accidentaly selecting spring one will create error.
 import com.cybertek.repository.UserRepository;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
